@@ -57,10 +57,10 @@
             
             <label for="estado civil">Estadi Civil</label>
             <select name="estadoCivil" id="estadoCivil"> 
-                <option value="casado">Casado(a)</option>
-                <option value="solteiro">Solteiro(a)</option>
-                <option value="viuvo">Viuvo(a)</option>
-                <option value="divorciado">Divorciado(a)</option>
+                <option value="casado">Casado (a)</option>
+                <option value="solteiro">Solteiro (a)</option>
+                <option value="viuvo">Viuvo (a)</option>
+                <option value="divorciado">Divorciado (a)</option>
                 <option value="uniao">Uniao Estável</option>
             </select>
 
@@ -99,7 +99,50 @@
 
 <label for="usuarioCidadeId">Cidade</label>
 <input type="text" name="usuarioCidade" id="usuarioCidadeId">
+
+        </fieldset>
+
+        <fieldset>
+
+        <legend> Hábitos: </legend>
+        <p> Marque a suas redes sociais</p>
+
+        <input type="checkbox" name="redesSociais" id="instagramId" value="instagram">
+        <label for="instagramId">Instagram</label>
+
+        <input type="checkbox" name="redesSociais" id="facebookId" value="facebook">
+        <label for="facebookId">Facebook</label>
+
+
+        <input type="checkbox" name="redesSociais" id="xId" value="x">
+        <label for="xId">X</label>
+
+        <input type="checkbox" name="redesSociais" id="linkedinId" value="linkedin">
+        <label for="linkedinId">Linkedin</label>
+
+        <input type="checkbox" name="redesSociais" id="youTubeId" value="youTube">
+        <label for="youTubeId">YouTube</label>
+        <br>
         
+        
+        <label for="estiloMusicalId">Estilo Musical?</label>
+        <input type="text" name="estiloMusical" id="estiloMusicalId" list="estilosMusicais">
+
+        <datalist id="estilosMusicais">
+            <option value="Rock">
+            <option value="Rap">
+            <option value="Pop">
+            <option value="Samba">
+            <option value="Pagode">
+            <option value="Forró">
+            <option value="MPB">
+            <option value="Sertanejo">
+            <option value="Funk">
+        </datalist>
+        <br>
+
+        <label for="corFavoritaId">Cor Favorita?</label>
+        <input type="color" name="corFavorita" id="corFavoritaId">
         </fieldset>
         
 
