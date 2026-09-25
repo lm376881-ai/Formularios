@@ -5,157 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa</title>
+    <link rel="stylesheet" href="./css/base.css">
 </head>
 
 <body>
 
-    <h1>Pesquisa De Usuário</h1>
+    <div class="principal">
+        <h1>Pesquisa de Usuário</h1>
+        <form action="" method="get">
 
-    <form action="" method="get">
+            <fieldset>
+                <legend>Dados pessoais:</legend>
+                <label for="nomeUsuarioId">Nome do usuário:</label>
+                <input type="text" name="nomeUsuario" id="nomeUsuarioId" required>
+                <br>
+                <label for="idadeUsuarioId">Idade do usuário:</label>
+                <input type="number" name="idadeUsuario" id="idadeUsuarioId" min="12" max="100" required>
+                <br>
+                <label for="dtNascimentoId">Data de nascimento:</label>
+                <input type="date" name="dtNascimento" id="dtNascimentoId">
+                <br>
+                <label for="emailUsuarioId">E-mail:</label>
+                <input type="email" name="emailUsuario" id="emailUsuarioId" required>
+                <br>
+                <label for="foneUsuarioId">Telefone:</label>
+                <input type="tel" name="foneUsuario" id="foneUsuarioId">
+                <br>
+                <label for="fotoUsuarioId">Foto do cliente:</label>
+                <input type="file" name="fotoUsuario" id="fotoUsuarioId" accept="image/*">
+            </fieldset>
 
+            <fieldset>
+                <legend>Perfil:</legend>
+                <p>Escolha o seu gênero</p>
+                <input type="radio" name="radioPerfil" id="radioPerfilFeminino" value="f">
+                <label for="radioPerfilFeminino">Feminino</label>
+                <input type="radio" name="radioPerfil" id="radioPerfilMasculino" value="m">
+                <label for="radioPerfilMasculino">Masculino</label>
+                <input type="radio" name="radioPerfil" id="radioPerfilNaoInformado" value="n">
+                <label for="radioPerfilNaoInformado">Prefiro não informar</label>
+                <br>
+                <label for="estadoCivilId">Estado civil?</label>
+                <select name="estadoCivil" id="estadoCivilId">
+                    <option value="casado">Casado(a)</option>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="estavel">União Estável</option>
+                </select>
 
+                <label for="estadosId">Estado:</label>
+                <select name="estados" id="estadosId">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <br>
+                <label for="usuarioCidadeId">Cidade:</label>
+                <input type="text" name="usuarioCidade" id="usuarioCidadeId">
+            </fieldset>
 
-        <fieldset>
-            <legend> Dados Pessoais</legend>
-            <label for="nomeUsuario">Nome do usuário:</label>
-            <input type="text" name="nomeUsuario" id="nomeUsuarioId" required>
-            <br>
-            <label for="idadeUsuario">Idade do usuário:</label>
-            <input type="number" name="idadeUsuario" id="idadeUsuarioId" min="18" max="120">
-            <br>
-            <label for="dtNascimento">Data de Nascimento:</label>
-            <input type="date" name="dtNascimento" id="dtNascimentoId">
-            <br>
-            
-            <label for="emailUsuario">Email:</label>
-            <input type="text" name="emailUsuario" id="emailUsuario">
-            <br>
+            <fieldset>
+                <legend>Hábitos:</legend>
+                <p>Marque as suas redes sociais</p>
+                <div class="redes-sociais">
+                    <input type="checkbox" name="redesSociais" id="instagramId" value="instagram">
+                    <label for="instagramId">Instagram</label>
+                    <input type="checkbox" name="redesSociais" id="facebookId" value="facebook">
+                    <label for="facebookId">Facebook</label>
+                    <input type="checkbox" name="redesSociais" id="xId" value="x">
+                    <label for="xId">X</label>
+                    <input type="checkbox" name="redesSociais" id="youtubeId" value="youtube">
+                    <label for="youtubeId">YouTube</label>
+                    <input type="checkbox" name="redesSociais" id="linkedinId" value="linkedin">
+                    <label for="linkedinId">LinkedIn</label>
+                </div>
+                <br>
+                <label for="estiloMusicalId">Estilo musical?</label>
+                <input type="text" name="estiloMusical" id="estiloMusicalId" list="estilosMusicais">
+                <datalist id="estilosMusicais">
+                    <option value="Rock">
+                    <option value="Pop">
+                    <option value="Samba">
+                    <option value="Pagode">
+                    <option value="Eletrônico">
+                    <option value="Forró">
+                    <option value="Funk">
+                    <option value="MPB">
+                </datalist>
+                <br>
+                <label for="corFavoritaId">Cor favorita?</label>
+                <input type="color" name="corFavorita" id="corFavoritaId">
+            </fieldset>
 
-            <label for="foneUsuario">Telefone:</label>
-            <input type="text" name="foneUsuario" id="foneUsuario" maxlength="11">
-            <br>
+            <button type="submit">Enviar dados</button>
+            <button type="reset">Limpar</button>
 
-            <label for="fotoUsuario">Foto do cliente:</label>
-            <input type="file" name="fotoUsuario" id="fotoUsuario" accept="image/*">
-            <br>
+        </form>
+    </div>
 
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Perfil:</legend>
-            <p>Escolha o seu gênero</p>
-            <input type="radio" name="radioPerfil" id="radioPerfilFeminino" value="feminino">
-            <label for="radioPerfilFeminino">Feminino</label>
-
-            <input type="radio" name="radioPerfil" id="radioPerfilMasculino" value="masculino">
-            <label for="radioPerfilMasculino"> Masculino</label>
-        
-            <input type="radio" name="radioPerfil" id="radioNaoInformar" value="não Informar">
-            <label for="radioNaoInformar">Prefiro não Informar</label>
-            <br>
-            
-            <label for="estado civil">Estadi Civil</label>
-            <select name="estadoCivil" id="estadoCivil"> 
-                <option value="casado">Casado (a)</option>
-                <option value="solteiro">Solteiro (a)</option>
-                <option value="viuvo">Viuvo (a)</option>
-                <option value="divorciado">Divorciado (a)</option>
-                <option value="uniao">Uniao Estável</option>
-            </select>
-
-
-<label for="estadosId">Estado</label>
-<select name="estados" id="estadosId">
-<option value="AC">Acre</option>
-<option value="AL">Alagoas</option>
-<option value="AP">Amapá</option>
-<option value="AM">Amazonas</option>
-<option value="BA">Bahia</option>
-<option value="CE">Ceará</option>
-<option value="DF">Distrito Federal</option>
-<option value="ES">Espirito Santo</option>
-<option value="GO">Goiás</option>
-<option value="MA">Maranhão</option>
-<option value="MS">Mato Grosso do Sul</option>
-<option value="MT">Mato Grosso</option>
-<option value="MG">Minas Gerais</option>
-<option value="PA">Pará</option>
-<option value="PB">Paraíba</option>
-<option value="PR">Paraná</option>
-<option value="PE">Pernambuco</option>
-<option value="PI">Piauí</option>
-<option value="RJ">Rio de Janeiro</option>
-<option value="RN">Rio Grande do Norte</option>
-<option value="RS">Rio Grande do Sul</option>
-<option value="RO">Rondônia</option>
-<option value="RR">Roraima</option>
-<option value="SC">Santa Catarina</option>
-<option value="SP">São Paulo</option>
-<option value="SE">Sergipe</option>
-<option value="TO">Tocantins</option>
-</select>
-<br>
-
-<label for="usuarioCidadeId">Cidade</label>
-<input type="text" name="usuarioCidade" id="usuarioCidadeId">
-
-        </fieldset>
-
-        <fieldset>
-
-        <legend> Hábitos: </legend>
-        <p> Marque a suas redes sociais</p>
-
-        <input type="checkbox" name="redesSociais" id="instagramId" value="instagram">
-        <label for="instagramId">Instagram</label>
-
-        <input type="checkbox" name="redesSociais" id="facebookId" value="facebook">
-        <label for="facebookId">Facebook</label>
-
-
-        <input type="checkbox" name="redesSociais" id="xId" value="x">
-        <label for="xId">X</label>
-
-        <input type="checkbox" name="redesSociais" id="linkedinId" value="linkedin">
-        <label for="linkedinId">Linkedin</label>
-
-        <input type="checkbox" name="redesSociais" id="youTubeId" value="youTube">
-        <label for="youTubeId">YouTube</label>
-        <br>
-        
-        
-        <label for="estiloMusicalId">Estilo Musical?</label>
-        <input type="text" name="estiloMusical" id="estiloMusicalId" list="estilosMusicais">
-
-        <datalist id="estilosMusicais">
-            <option value="Rock">
-            <option value="Rap">
-            <option value="Pop">
-            <option value="Samba">
-            <option value="Pagode">
-            <option value="Forró">
-            <option value="MPB">
-            <option value="Sertanejo">
-            <option value="Funk">
-        </datalist>
-        <br>
-
-        <label for="corFavoritaId">Cor Favorita?</label>
-        <input type="color" name="corFavorita" id="corFavoritaId">
-        </fieldset>
-        
-
-
-
-
-
-
-
-        <button type="submit"> Enviar dados</button>
-        <button type="reset">Limpar</button>
-
-    </form>
 
 </body>
 

@@ -1,0 +1,94 @@
+/* Arquivo css principal */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cfcfcf;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.principal {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem #c0bfbf;
+}
+
+fieldset {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+label {
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+input, select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+input[type="color"] {
+    width: 2.5rem;
+    padding: 0 0.5rem;
+}
+
+button[type="submit"]{
+    background-color: #034f0d;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+}
+
+button[type="reset"]{
+    background-color: #e0a40b;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+}
